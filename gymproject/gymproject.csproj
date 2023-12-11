@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8707E646-14C9-4245-BFCB-CC3F9AFD4437}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>gymproject</RootNamespace>
+    <AssemblyName>gymproject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.9.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.21.9\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.33\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addinventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addinventory.Designer.cs">
+      <DependentUpon>addinventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminprofile.Designer.cs">
+      <DependentUpon>adminprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminviewfeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminviewfeedback.Designer.cs">
+      <DependentUpon>adminviewfeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="approveleave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="approveleave.Designer.cs">
+      <DependentUpon>approveleave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="choosetrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="choosetrainer.Designer.cs">
+      <DependentUpon>choosetrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clientprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientprofile.Designer.cs">
+      <DependentUpon>clientprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createaccount.Designer.cs">
+      <DependentUpon>createaccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dataview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataview.Designer.cs">
+      <DependentUpon>dataview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="leaverequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="leaverequest.Designer.cs">
+      <DependentUpon>leaverequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="memberDataGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memberDataGrid.Designer.cs">
+      <DependentUpon>memberDataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="membership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="membership.Designer.cs">
+      <DependentUpon>membership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment.Designer.cs">
+      <DependentUpon>payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paymentsuccessful.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paymentsuccessful.Designer.cs">
+      <DependentUpon>paymentsuccessful.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportdamage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportdamage.Designer.cs">
+      <DependentUpon>reportdamage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trainerDatagrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trainerDatagrid.Designer.cs">
+      <DependentUpon>trainerDatagrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="trainerprofile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trainerprofile.Designer.cs">
+      <DependentUpon>trainerprofile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uploadfeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uploadfeedback.Designer.cs">
+      <DependentUpon>uploadfeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewdamage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewdamage.Designer.cs">
+      <DependentUpon>viewdamage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewfeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewfeedback.Designer.cs">
+      <DependentUpon>viewfeedback.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addinventory.resx">
+      <DependentUpon>addinventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminprofile.resx">
+      <DependentUpon>adminprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminviewfeedback.resx">
+      <DependentUpon>adminviewfeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="approveleave.resx">
+      <DependentUpon>approveleave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="choosetrainer.resx">
+      <DependentUpon>choosetrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientprofile.resx">
+      <DependentUpon>clientprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createaccount.resx">
+      <DependentUpon>createaccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataview.resx">
+      <DependentUpon>dataview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="leaverequest.resx">
+      <DependentUpon>leaverequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memberDataGrid.resx">
+      <DependentUpon>memberDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="membership.resx">
+      <DependentUpon>membership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment.resx">
+      <DependentUpon>payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paymentsuccessful.resx">
+      <DependentUpon>paymentsuccessful.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reportdamage.resx">
+      <DependentUpon>reportdamage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainerDatagrid.resx">
+      <DependentUpon>trainerDatagrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trainerprofile.resx">
+      <DependentUpon>trainerprofile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uploadfeedback.resx">
+      <DependentUpon>uploadfeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewdamage.resx">
+      <DependentUpon>viewdamage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewfeedback.resx">
+      <DependentUpon>viewfeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
